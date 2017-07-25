@@ -106,7 +106,7 @@ Notice the body, the container, and each of the divs are surrounded by a red bor
 
 The image below illustrates the box model and what you should have seen in your dev tools:
 
-![box-model](http://s6.postimg.org/gi8r6c341/css_box_model.png)
+![box-model](https://mdn.mozillademos.org/files/13649/box-model-alt-small.png)
 
 _From [www.theslate.org](http://www.theslate.org)_
 
