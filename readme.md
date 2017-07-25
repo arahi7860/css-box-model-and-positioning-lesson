@@ -516,3 +516,6 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 - Compare the elements of The Box Model - margin, border, padding, content.
 - How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
+
+## References and Further Reading
+- [MDN Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model)
