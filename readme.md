@@ -1,12 +1,3 @@
----
-title: CSS Box Model and Positioning
-type: lesson
-duration: "1:25"
-creator:
-    name: Alex Chin
-    city: London
-competencies: Front-end intro
----
 
 # CSS Box Model and Positioning
 
