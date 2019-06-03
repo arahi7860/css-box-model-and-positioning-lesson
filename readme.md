@@ -40,8 +40,12 @@ Let's write some HTML we can come back to and use to visualize what we're talkin
 Looking at the html:
 
 ```html
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- head section -->
+<link rel="stylesheet" type="text/css" href="main.css">
+```
 
+```
+<!-- body section -->
 <div id="container">
     <div id="square1"></div>
     <div id="square2"></div>
