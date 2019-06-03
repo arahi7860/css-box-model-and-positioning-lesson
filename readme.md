@@ -44,7 +44,7 @@ Looking at the html:
 <link rel="stylesheet" type="text/css" href="main.css">
 ```
 
-```
+```html
 <!-- body section -->
 <div id="container">
     <div id="square1"></div>
