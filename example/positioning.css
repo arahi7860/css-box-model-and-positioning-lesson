@@ -1,0 +1,45 @@
+/* Positioning */
+
+.container {
+    background-color: gray;
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+
+#square1 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position:relative;
+    top: 0;
+    left: 40px;
+}
+
+#square2 {
+    /* Comment out visibilty to see this square */
+    visibility: hidden;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    top: 0;
+    left: 0;
+}
+
+#square3 {
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#square4 {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box Model</title>
+    <link href="custom.css" rel="stylesheet">
+    <link href="display.css" rel="stylesheet">
+    <link href="positioning.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>I am the header!</h1>
+    </header>
+
+    <main>
+        <h2>Box Model</h2>
+        <div class="margin">margin
+            <div class="border">border
+                <div class="padding">padding
+                    <div class="content">
+                        content
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>margin</h2>
+            <p>clears an area around the border; the margin does not have a background color, it is completely
+                transparent</p>
+        </div>
+
+        <div class="box">
+            <h2>border</h2>
+            <p>a border that goes around the padding and content; the border is affected by the background color of the
+                box</p>
+        </div>
+
+        <div class="box">
+            <h2>padding</h2>
+            <p>clears an area around the content; the space between the content and the border; the padding is affected
+                by the background color of the box</p>
+        </div>
+
+        <div class="box">
+            <h2>content</h2>
+            <p>the content of the box, where text and images appear</p>
+        </div>
+
+        <div class="box">
+            <h2>inline</h2>
+            <p>An inline element has no line break before or after it. This makes the element sit
+                on the same line as another element, but without formatting it may look like a block. It only takes up as much
+                width as it needs (not the whole line). Inline places all your elements on a single line. The bad news
+                is that it doesn't maintain their "box"ness.</p>
+            <div class="inline">I am the first inline content</div>
+            <div class="inline">I am the second inline content</div>
+            <div class="inline">I am the third inline content</div>
+            <p>Note: Resize the browser window to see that it's all on one line and that there is no concept of block!</p>
+
+            <h2>Inline elements in HTML include:</h2>
+            <table style="width:100%">
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>&lt;cite&gt;</td>
+                    <td>&lt;label&gt;</td>
+                    <td>&lt;small&gt;</td>
+                    <td>&lt;var&gt;</td>
+                    <td>&lt;abbr&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;code&gt;</td>
+                    <td>&lt;map&gt;</td>
+                    <td>&lt;span&gt;</td>
+                    <td>&lt;acronym&gt;</td>
+                    <td>&lt;dfn&gt;</td>
+                    <td>&lt;object&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;strong&gt;</td>
+                    <td>&lt;b&gt;</td>
+                    <td>&lt;em&gt;</td>
+                    <td>&lt;output&gt;</td>
+                    <td>&lt;sub&gt;</td>
+                    <td>&lt;bdo&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;i&gt;</td>
+                    <td>&lt;q&gt;</td>
+                    <td>&lt;sup&gt;</td>
+                    <td>&lt;big&gt;</td>
+                    <td>&lt;img&gt;</td>
+                    <td>&lt;samp&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;textarea&gt;</td>
+                    <td>&lt;br&gt;</td>
+                    <td>&lt;input&gt;</td>
+                    <td>&lt;script&gt;</td>
+                    <td>&lt;time&gt;</td>
+                    <td>&lt;button&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;kbd&gt;</td>
+                    <td>&lt;select&gt;</td>
+                    <td>&lt;tt&gt;</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <h2>block</h2>
+            <p>A block element has some whitespace above and below it and does not tolerate any HTML elements next to
+                it. This makes the element a block box. It won't let anything sit next to it on the page and takes up
+                the full width.</p>
+
+            <div class="block">I am the first block level content</div>
+            <div class="block">I am the second block level content</div>
+            <div class="block">I am the third block level content</div>
+
+            <h2>Block level elements in HTML include:</h2>
+            <table style="width:100%">
+                <tr>
+                    <td>&lt;div&gt;</td>
+                    <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                    <td>&lt;p&gt;</td>
+                    <td>&lt;header&gt;</td>
+                    <td>&lt;footer&gt;</td>
+                    <td>&lt;main&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;section&gt;</td>
+                    <td>&lt;hr&gt;</td>
+                    <td>&lt;dt&gt;</td>
+                    <td>&lt;address&gt;</td>
+                    <td>&lt;table&gt;</td>
+                    <td>&lt;fieldset&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;article&gt;</td>
+                    <td>&lt;li&gt;</td>
+                    <td>&lt;aside&gt;</td>
+                    <td>&lt;figcaption&gt;</td>
+                    <td>&lt;table&gt;</td>
+                    <td>&lt;ul&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;tfoot&gt;</td>
+                    <td>&lt;blockquote&gt;</td>
+                    <td>&lt;figure&gt;</td>
+                    <td>&lt;nav&gt;</td>
+                    <td>&lt;table&gt;</td>
+                    <td>&lt;canvas&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;noscript&gt;</td>
+                    <td>&lt;video&gt;</td>
+                    <td>&lt;dd&gt;</td>
+                    <td>&lt;form&gt;</td>
+                    <td>&lt;ol&gt;</td>
+                    <td>&lt;canvas&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;dl&gt;</td>
+                    <td>&lt;pre&gt;</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <h2>inline-block</h2>
+            <p>An inline-block element is placed as an inline element (on the same line as adjacent content), but it
+                behaves as a block element. This makes the element a block box but will allow other elements to sit next
+                to it on the same line.</p>
+            <div class="inline-block">I am the first inline-block content</div>
+            <div class="inline-block">I am the second inline-block content</div>
+            <div class="inline-block">I am the third inline-block content</div>
+        </div>
+
+        <div class="box">
+            <h2>Positioning</h2>
+            <div class="container">
+                <div id="square1"></div>
+                <div id="square2"></div>
+                <div id="square3"></div>
+                <div id="square4"></div>
+            </div>
+            <div class="inline-block">I am the first block level content</div>
+            <div class="inline-block">I am the second block level content</div>
+            <div class="inline-block">I am the third block level content</div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>I'm the footer!</p>
+    </footer>
+</body>
+
+</html>

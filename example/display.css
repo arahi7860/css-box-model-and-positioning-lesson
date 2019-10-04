@@ -1,0 +1,32 @@
+header {
+    background: lightblue;
+}
+
+main {
+    background: lightgrey;
+}
+
+footer {
+    background: lightgreen;
+}
+
+/* inline vs block vs inline-block */
+/* margin vs border vs padding */
+
+.inline {
+    /* By default, a <div> is block level. We can make it inline by using the css display property. */
+    display: inline;
+    background: yellow;
+}
+
+.block {
+    /* Since <div> by default is block level, the below line is redundant, yet explicit. */
+    display: block;
+    background: blue;
+}
+
+.inline-block {
+    /* We can change the display of an element to be inline-block using the display propert. */
+    display: inline-block;
+    background: white;
+}

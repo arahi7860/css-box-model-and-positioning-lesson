@@ -1,0 +1,114 @@
+body {
+    padding: 80px;
+}
+
+header {
+    background: lightblue;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h2 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+main {
+    background: lightgrey;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 25px;
+}
+
+footer {
+    background: lightgreen;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 28px;
+}
+
+.inline {
+    display: inline;
+    background: yellow;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 15px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+}
+
+.block {
+    display: block;
+    background: blue;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+}
+
+.inline-block {
+    display: inline-block;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+}
+
+
+.box {
+    background: white;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 20px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 18px;
+}
+
+.margin {
+    background: white;
+    border: 2px solid black;
+    padding: 40px;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 22px;
+    padding-bottom: 62px;
+    padding-right: 62px;
+    padding-left: 62px;
+}
+
+.border {
+    background: black;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    padding-bottom: 22px;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.padding {
+    background: lightgrey;
+    padding: 40px;
+    color: black;
+    font-size: 22px;
+    padding-bottom: 62px;
+    padding-right: 62px;
+    padding-left: 62px;
+}
+
+.content {
+    background: white;
+    padding: 20px;
+    border: 2px dotted black;
+    font-size: 22px;
+}
+
+table {
+    font-family: "Lucida Console", Monaco, monospace;
+}
