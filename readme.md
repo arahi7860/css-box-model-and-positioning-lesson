@@ -46,38 +46,38 @@ Looking at the html:
 
 ```html
 <!-- body section -->
-<div id="container">
-    <div id="square1"></div>
-    <div id="square2"></div>
-    <div id="square3"></div>
-    <div id="square4"></div>
+<div class="container">
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
 </div>
 ```
 
 And the CSS:
 
 ```css
-#container {
+.container {
     height: 500px;
     width: 500px;
     background-color: gray;
 }
-#square1 {
+.square1 {
     background-color: red;
     height: 100px;
     width: 100px;
 }
-#square2 {
+.square2 {
     background-color: blue;
     height: 100px;
     width: 100px;
 }
-#square3 {
+.square3 {
     background-color: green;
     height: 100px;
     width: 100px;
 }
-#square4 {
+.square4 {
     background-color: black;
     height: 100px;
     width: 100px;
@@ -194,12 +194,12 @@ Update your CSS file to include this.
 Padding becomes more apparent when we have "stuff" inside the box. If we're talking about a `<p>` element, the "stuff" is the text of the paragraph - the __content__. Let's add some text:
 
 ```html
-<div id="container">
+<div class="container">
   <p>Hi there!</p>
-    <div id="square1"></div>
-    <div id="square2"></div>
-    <div id="square3"></div>
-    <div id="square4"></div>
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
 </div>
 ```
 
@@ -300,7 +300,7 @@ In this small example, it doesn't seem to matter much, but it really is a signif
 Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.  Let's add some CSS and see what happens:
 
 ```css
-#square1 {
+.square1 {
     background-color: red;
     height: 100px;
     width: 100px;
@@ -321,7 +321,7 @@ Again, the default positioning for all elements is static. This means that no po
 If we revisit our squares from earlier in class:
 
 ```css
-#container {
+.container {
     background-color: gray;
     position: static;
     height: 500px;
@@ -338,7 +338,7 @@ An element with fixed position is positioned relative to the browser window.  It
 Try it out:
 
 ```css
-#square2 {
+.square2 {
     position: fixed;
     width: 100%;
     height: 100px;
@@ -354,7 +354,7 @@ Try it out:
 Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
 
 ```css
-#square1 {
+.square1 {
     background-color: red;
     height: 100px;
     width: 100px;
@@ -371,7 +371,7 @@ Specifying `position:absolute` _removes the element from the document_ and place
 Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.
 
 ```css
-#square1 {
+.square1 {
     background-color: red;
     height: 100px;
     width: 100px;
@@ -411,13 +411,13 @@ So, without clears, change the heights of square1 and square2 to 200px and absol
 
 
 ```css
-#container {
+.container {
     background-color: gray;
     position: relative;
     height: 500px;
     width: 500px;
 }
-#square1 {
+.square1 {
     background-color: red;
     height: 200px;
     width: 100px;
@@ -425,7 +425,7 @@ So, without clears, change the heights of square1 and square2 to 200px and absol
     top: 0;
     right: 0;
 }
-#square2 {
+.square2 {
     background-color: blue;
     height: 200px;
     width: 100px;
@@ -442,7 +442,7 @@ Also, notice how we can't see square3 or square4? They are being covered up by o
 We can reveal those missing divs by declaring their absolute position in the bottom left and right of our container:
 
 ```css
-#square3 {
+.square3 {
     background-color: green;
     height: 100px;
     width: 100px;
@@ -450,7 +450,7 @@ We can reveal those missing divs by declaring their absolute position in the bot
     bottom: 0;
     left: 0;
 }
-#square4 {
+.square4 {
     background-color: black;
     height: 100px;
     width: 100px;
@@ -472,12 +472,12 @@ Your html should like this:
 
 ```html
 
-    <div id="container">
-        <div id="square1"></div>
-        <div id="square2"></div>
+    <div class="container">
+        <div class="square1"></div>
+        <div class="square2"></div>
         (4 paragraphs of ipsum)
-        <div id="square3"></div>
-        <div id="square4"></div>
+        <div class="square3"></div>
+        <div class="square4"></div>
     </div>
 
 ```
@@ -487,7 +487,7 @@ As expected our text falls behind our absolute positioned columns? Now lets make
 Back in our CSS remove the absolute positioning from our "square2" div and replace it with `float:left`:
 
 ```css
-#square2 {
+.square2 {
     background-color: blue;
     height: 200px;
     width: 100px;
