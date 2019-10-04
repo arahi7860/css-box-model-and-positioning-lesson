@@ -58,7 +58,6 @@ And the CSS:
 
 ```css
 .container {
-    height: 500px;
     width: 500px;
     background-color: gray;
 }
@@ -324,7 +323,6 @@ If we revisit our squares from earlier in class:
 .container {
     background-color: gray;
     position: static;
-    height: 500px;
     width: 500px;
 }
 ```
