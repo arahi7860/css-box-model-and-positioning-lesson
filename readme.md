@@ -46,38 +46,36 @@ Looking at the html:
 
 ```html
 <!-- body section -->
-<div class="container">
-    <div class="square1"></div>
-    <div class="square2"></div>
-    <div class="square3"></div>
-    <div class="square4"></div>
+<div id="squares-container">
+    <div class="square1 square"></div>
+    <div class="square2 square"></div>
+    <div class="square3 square"></div>
+    <div class="square4 square"></div>
 </div>
 ```
 
 And the CSS:
 
 ```css
-.container {
+#squares-container{
     width: 500px;
     background-color: gray;
 }
 .square1 {
     background-color: red;
-    height: 100px;
-    width: 100px;
 }
 .square2 {
     background-color: blue;
-    height: 100px;
-    width: 100px;
+
 }
 .square3 {
     background-color: green;
-    height: 100px;
-    width: 100px;
 }
 .square4 {
     background-color: black;
+}
+
+.square{
     height: 100px;
     width: 100px;
 }
@@ -193,14 +191,16 @@ Update your CSS file to include this.
 Padding becomes more apparent when we have "stuff" inside the box. If we're talking about a `<p>` element, the "stuff" is the text of the paragraph - the __content__. Let's add some text:
 
 ```html
-<div class="container">
-  <p>Hi there!</p>
-    <div class="square1"></div>
-    <div class="square2"></div>
-    <div class="square3"></div>
-    <div class="square4"></div>
+<div id="squares-container">
+    <p>hi there!</p>
+    <div class="square1 square"></div>
+    <div class="square2 square"></div>
+    <div class="square3 square"></div>
+    <div class="square4 square"></div>
 </div>
 ```
+
+_Note the way we're assigning two classes to each element; why? What does this achieve?_
 
 Open the browser, and now, give that `p` tag some padding in the dev tools:
 
@@ -285,12 +285,14 @@ With this CSS:
 
 ```
 
+
 We would end up with something like this:
 
 ![display](/images/display.png)
 
 > Note: Explain the styling in this image.
 
+Try adding text before and after the elemets themselves, and see how the different display elements respond.
 
 ## Positioning - Codealong (10 mins)
 
@@ -335,7 +337,7 @@ Again, the default positioning for all elements is static. This means that no po
 If we revisit our squares from earlier in class:
 
 ```css
-.container {
+#squares-container{
     background-color: gray;
     position: static;
     width: 500px;
@@ -369,8 +371,6 @@ Specifying `position:absolute` _removes the element from the document_ and place
 ```css
 .square1 {
     background-color: red;
-    height: 100px;
-    width: 100px;
     position:absolute;
     top: 0;
     right: 0;
@@ -386,8 +386,6 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 ```css
 .square1 {
     background-color: red;
-    height: 100px;
-    width: 100px;
     position:relative;
     top: 0;
     left: 40px;
@@ -396,7 +394,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 
 ## Floats and Clears - Intro (10 min)
 
-The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text will be wrapped around the element.
+The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text and other inline elements will be wrapped around the element.
 
 <p style="text-align: center">
 <img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
@@ -406,7 +404,18 @@ Note that "absolutely positioned" elements ignore the float property as they are
 
 Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning.
 
-There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. "None" (the default) ensures the element will not float and "inherit" which will assume the float value from that elements parent element.
+There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. "None" (the default) ensures the element will not float and "inherit" which will assume the float value from that element's parent element.
+
+
+Add `float: right` to the `square` class, and see how the elements behave.
+
+```css
+.square{
+    height: 100px;
+    width: 100px;
+    float: right;
+}
+```
 
 #### Clear
 
@@ -416,108 +425,52 @@ All elements will float next to floated items until they are specifically cleare
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
-## Using position, floats, and clears to create columns - Code along (20 mins)
-
-Now that we have the basics of relative and absolute positioning, lets create a two column layout by changing the heights; then, we'll investigate how to do this with floats and clears for a more effective approach.  
-
-So, without clears, change the heights of square1 and square2 to 200px and absolutely position the two squares like so:
-
-
-```css
-.container {
-    background-color: gray;
-    position: relative;
-    height: 500px;
-    width: 500px;
-}
-.square1 {
-    background-color: red;
-    height: 200px;
-    width: 100px;
-    position:absolute;
-    top: 0;
-    right: 0;
-}
-.square2 {
-    background-color: blue;
-    height: 200px;
-    width: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-```
-
-Note how our "square2" div is positioned to the top left of the container and "square1" to the top right. This was done to illustrate that absolute positioning doesn't care what order the elements appear in your html.
-
-Also, notice how we can't see square3 or square4? They are being covered up by our absolute-positioned "square2" div (remember absolute positioning removes the element from the document).
-
-We can reveal those missing divs by declaring their absolute position in the bottom left and right of our container:
-
-```css
-.square3 {
-    background-color: green;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.square4 {
-    background-color: black;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-```
-
-This works fine when we know the exact sizes of our elements but what if we were building something like a blog and we had text in those columns or surrounding them? We won't always know the exact amount of text or their font sizes. This is where floats can help us.
-
-#### Floats to create multicolumn layouts
-
-If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
-
-Now, let's venture back to our html page and add this text after the closing tag of our "square2" div and before the opening tag of our "square3" div.
-
-Your html should like this:
-
+Add an additional `div` between the square elements with a class of clear:
 ```html
-
-    <div class="container">
-        <div class="square1"></div>
-        <div class="square2"></div>
-        (4 paragraphs of ipsum)
-        <div class="square3"></div>
-        <div class="square4"></div>
-    </div>
-
+<div id="squares-container">
+<p>Hi there!</p>
+  <div class="square1 square"></div>
+  <div class="square2 square"></div>
+  <div class="square3 square"></div>
+  <!-- add this: -->
+  <div class="clear">some text</div>
+  <div class="square4 square"></div>
+</div>
 ```
 
-As expected our text falls behind our absolute positioned columns? Now lets make our elements aware of each other with floats.
-
-Back in our CSS remove the absolute positioning from our "square2" div and replace it with `float:left`:
+Notice how adding `clear: left` effects things.
 
 ```css
-.square2 {
-    background-color: blue;
-    height: 200px;
-    width: 100px;
-    float: left;
+.clear {
+    clear:left;
 }
 ```
 
-Note that our text is aware that our "square2" div wants to be as left as possible and kindly wraps it in a nice text hug.
 
-#### Floats with clears
+## Creating columns
 
-While floats make other elements aware of their location and get text hugs, clears make other elements aware and are told not to touch.
+We can also use floats to create a two column layout. First, let's change the dimensions of our squares to 200px X 200px, like so:
 
-Lets go back to our CSS and change our "square2" div's positioning from float:left to clear: right.
 
-`Clear` is saying "I'm not sure how much space I'm going to take but whatever it is clear off my right side" so our text respects its wishes and drops to the line below.
+```css
+.square{
+    height: 200px;
+    width: 200px;
+} 
+```
+As we expect, the squares, being block elements, each get their own rows. Now let's add `float: left`:
 
+
+```css
+.square{
+    height: 200px;
+    width: 200px;
+    float: left;
+} 
+```
+
+Now try getting the text to appear between the the two rows, like so:
+![display](/images/clear.png)
 
 ## Conclusion (5 mins)
 
