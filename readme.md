@@ -222,11 +222,18 @@ As you saw, the outermost box of each element went all the way across the page. 
 
 We can change all this with the first positioning property we'll learn, the `display` property and the four values we can use: inline, block, inline-block, and none.
 
-* An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line). Inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness
+* An **inline** element:
+    -  Has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line).
+    - Does not allow allow width, height, and margin top/bottom to be set;  in other word, it doesn't have the "boxy" quality of block element.
 
-* A **block** element has some whitespace above and below it and does not tolerate any HTML elements next to it. This makes the element a block box. It won't let anything sit next to it on the page and takes up the full width.
+* A **block** element:
+    -  Won't let anything sit next to it on the page and takes up the full width.
+    - Is "boxy," and allows for setting width, height, and margin top/bottom.
+ 
 
-* An **inline-block** element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element. This makes the element a block box but will allow other elements to sit next to it on the same line.
+* An **inline-block** element:
+    - Is placed as an inline element (on the same line as adjacent content).
+    - Is "boxy" in that it allows for custom width, height, and margin top/bottom.
 
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
 
@@ -234,24 +241,23 @@ To illustrate this, if we had this HTML:
 
 
 ```html
-<div class="inline">
-    <div class="inline">Content</div>
-    <div class="inline">Content</div>
-    <div class="inline">Content</div>
+<div>
+    <div class="inline content">inline</div>
+    <div class="inline content">inline</div>
+    <div class="inline content">inline</div>
 </div>
 
-<div class="block">
-    <div class="block">Content</div>
-    <div class="block">Content</div>
-    <div class="block">Content</div>
+<div>
+    <div class="block content">block</div>
+    <div class="block content">block</div>
+    <div class="block content">block</div>
 </div>
 
-<div class="inline-block">
-    <div class="inline-block">Content</div>
-    <div class="inline-block">Content</div>
-    <div class="inline-block">Content</div>
+<div>
+    <div class="inline-block content">inline-block</div>
+    <div class="inline-block content">inline-block</div>
+    <div class="inline-block content">inline-block</div>
 </div>
-
 ```
 
 With this CSS:
@@ -263,16 +269,25 @@ With this CSS:
 
 .block {
     display: block;
+
 }
 
 .inline-block {
     display: inline-block;
 }
+
+.content{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px dotted red;
+}
+
 ```
 
 We would end up with something like this:
 
-![display](https://i.imgur.com/zeD1f2m.png)
+![display](/images/display.png)
 
 > Note: Explain the styling in this image.
 
