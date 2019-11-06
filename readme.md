@@ -470,6 +470,7 @@ As we expect, the squares, being block elements, each get their own rows. Now le
 ```
 
 Now try getting the text to appear between the the two rows, like so:
+
 ![display](/images/clear.png)
 
 ## Conclusion (5 mins)
