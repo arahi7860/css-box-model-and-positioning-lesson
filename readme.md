@@ -292,7 +292,7 @@ We would end up with something like this:
 
 > Note: Explain the styling in this image.
 
-Try adding text before and after the elemets themselves, and see how the different display elements respond.
+Try adding text before and after the elements themselves, and see how the different display elements respond.
 
 ## Positioning - Codealong (10 mins)
 
