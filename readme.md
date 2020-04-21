@@ -292,7 +292,7 @@ We would end up with something like this:
 
 > Note: Explain the styling in this image.
 
-Try adding text before and after the elemets themselves, and see how the different display elements respond.
+Try adding text before and after the elements themselves, and see how the different display elements respond.
 
 ## Positioning - Codealong (10 mins)
 
@@ -392,91 +392,10 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 }
 ```
 
-## Floats and Clears - Intro (10 min)
-
-The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text and other inline elements will be wrapped around the element.
-
-<p style="text-align: center">
-<img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
-</p>
-
-Note that "absolutely positioned" elements ignore the float property as they are removed from the normal document flow.
-
-Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning.
-
-There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. "None" (the default) ensures the element will not float and "inherit" which will assume the float value from that element's parent element.
-
-
-Add `float: right` to the `square` class, and see how the elements behave.
-
-```css
-.square{
-    height: 100px;
-    width: 100px;
-    float: right;
-}
-```
-
-#### Clear
-
-All elements will float next to floated items until they are specifically cleared. Think about the text on the page.
-
-<p style="text-align: center">
-<img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
-</p>
-
-Add an additional `div` between the square elements with a class of clear:
-```html
-<div id="squares-container">
-<p>Hi there!</p>
-  <div class="square1 square"></div>
-  <div class="square2 square"></div>
-  <div class="square3 square"></div>
-  <!-- add this: -->
-  <div class="clear">some text</div>
-  <div class="square4 square"></div>
-</div>
-```
-
-Notice how adding `clear: left` effects things.
-
-```css
-.clear {
-    clear:left;
-}
-```
-
-
-## Creating columns
-
-We can also use floats to create a two column layout. First, let's change the dimensions of our squares to 200px X 200px, like so:
-
-
-```css
-.square{
-    height: 200px;
-    width: 200px;
-} 
-```
-As we expect, the squares, being block elements, each get their own rows. Now let's add `float: left`:
-
-
-```css
-.square{
-    height: 200px;
-    width: 200px;
-    float: left;
-} 
-```
-
-Now try getting the text to appear between the the two rows, like so:
-
-![display](/images/clear.png)
 
 ## Conclusion (5 mins)
 
 - Compare the elements of The Box Model - margin, border, padding, content.
-- How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
 
 ## References and Further Reading
