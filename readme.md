@@ -6,7 +6,6 @@
 
 - Describe the difference between block, inline, and inline-block elements
 - Adjust element spacing using padding and margin
-- Create floating elements to position content removed from the standard document flow
 - Explain the difference between and use cases of static, relative, fixed, & absolute positioning
 - Create a page with multicolumn layout
 
@@ -19,7 +18,7 @@
 
 > Note: Solution code for this lesson is built out as the lesson progresses.
 
-## An Intro to The Box Model (5 mins)
+## An Intro to The Box Model
 
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
@@ -28,7 +27,7 @@ The CSS box model describes this principal - a box wraps around all HTML element
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
 
-## Box Model Demo - Codealong (5 mins)
+## Box Model Demo - Codealong
 
 Let's write some HTML we can come back to and use to visualize what we're talking about.
 
@@ -94,7 +93,7 @@ How about if we drop this code into our CSS file:
 
 Notice the body, the container, and each of the divs are surrounded by a red border.  Peak at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
 
-## The Box Model and its components - Intro (10 mins)
+## The Box Model and its components
 
 The image below illustrates the box model and what you should have seen in your dev tools:
 
@@ -113,7 +112,7 @@ But what do these different layers mean, and how are they relating to one anothe
 
 * **Content** - The content of the box, where text and images appear
 
-#### Layers of the Box Model - Codealong (15 mins)
+#### Layers of the Box Model
 
 Let's get go into some more detail and practice with each of these elements of The Box Model.
 
@@ -214,7 +213,7 @@ p {
 Amazing!  Add those styles to your CSS file.
 
 
-## Taking Up Space using Display - Intro (15 mins)
+## Taking Up Space using Display
 
 Cool, right? Each HTML element gets its own box to live in.
 
@@ -294,7 +293,7 @@ We would end up with something like this:
 
 Try adding text before and after the elements themselves, and see how the different display elements respond.
 
-## Positioning - Codealong (10 mins)
+## Positioning
 
 Another CSS property, "position", can take `relative` or `absolute` values, among others.
 
@@ -393,7 +392,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 ```
 
 
-## Conclusion (5 mins)
+## Conclusion
 
 - Compare the elements of The Box Model - margin, border, padding, content.
 - Compare inline-block, block, and inline.
