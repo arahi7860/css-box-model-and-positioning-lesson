@@ -46,10 +46,10 @@ Looking at the html:
 ```html
 <!-- body section -->
 <div id="squares-container">
-    <div class="square1 square"></div>
-    <div class="square2 square"></div>
-    <div class="square3 square"></div>
-    <div class="square4 square"></div>
+    <div class="square1 square">Square 1</div>
+    <div class="square2 square">Square 2</div>
+    <div class="square3 square">Square 3</div>
+    <div class="square4 square">Square 4</div>
 </div>
 ```
 
