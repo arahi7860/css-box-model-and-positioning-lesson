@@ -30,7 +30,7 @@ With CSS properties and values, it is possible to apply specific styles to each 
 Let's write some HTML we can come back to and use to visualize what we're talking about.
 
 - Create an new directory called `box-model-work`
-- Create html page called `index.html` with an externally linked css stylesheet called `main.css`
+- Create html page called `index.html` with an externally linked css stylesheet called `style.css`
 - Inside your html page create a "container" div holding four divs within.
 - Inside our CSS page, make the container a 500px gray square containing 100px squares within that are red, blue, green, and black.
 
@@ -38,7 +38,7 @@ Looking at the html:
 
 ```html
 <!-- head section -->
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 ```
 
 ```html
