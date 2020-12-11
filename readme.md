@@ -16,8 +16,6 @@
 - Write basic HTML
 - Use the chrome console
 
-> Note: Solution code for this lesson is built out as the lesson progresses.
-
 ## An Intro to The Box Model
 
 
